@@ -31,24 +31,13 @@
   </head>
 <body>
 
-  <!-- Page loader Start
-  <div id="pageloader">   
-    <div class="loader-item">
-      <div class="loader">
-        <div class="spin"></div>
-        <div class="bounce"></div>
-      </div>
-    </div>
-  </div>
-  Page loader End -->
-
-  <header>
+  <header class="fixed-top header-fullpage bordered-nav wow fadeInDown">
     <!-- Main Navigation Start -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-transparent header-fullpage wow fadeInDown">
-      <div class="container d-flex align-items-start">
-        <div class="col col-lg-2 col-md-3">
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container text-nowrap bdr-nav px-0">
+        <div class="d-flex mr-auto">
           <a class="navbar-brand rounded-bottom light-bg" href="index.html">
-            <img src="images/fleet-logo.png" alt="">
+            <img src="images/fleet_logo.png" alt="">
           </a>
         </div>
         <!-- Toggle Button Start -->
@@ -59,48 +48,7 @@
         </button>
         <!-- Toggle Button End -->
         <div class="col-lg-auto">
-          <div class="text-right top-bar-right">
-              <!-- Topbar Language Dropdown Start -->
-              <!-- <div class="dropdown d-inline-flex lang-toggle">
-                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown" data-animations="slideInUp slideInUp slideInUp slideInUp">
-                  <img src="images/us.svg" alt="" class="dropdown-item-icon"> 
-                  <span class="d-inline-block d-lg-none">US</span>
-                  <span class="d-none d-lg-inline-block">United States</span> <i class="icofont-rounded-down"></i>
-                </a>
-                <div class="dropdown-menu dropdownhover-bottom dropdown-menu-right" role="menu">
-                  <a class="dropdown-item active" href="#">English</a>
-                  <a class="dropdown-item" href="#">Deutsch</a>
-                  <a class="dropdown-item" href="#">Español&lrm;</a>
-                </div>
-              </div> -->
-                <!-- Topbar Language Dropdown End -->    
-
-              <!-- Topbar Social Icons Start -->
-              <div class="top-bar-btn d-inline-flex social-icons">
-                <a href="#"><i class="icofont-facebook"></i></a> 
-                <a href="#"><i class="icofont-twitter"></i></a> 
-                <a href="#"><i class="icofont-whatsapp"></i></a> 
-                <a href="#"><i class="icofont-google-plus"></i></a> 
-              </div>
-              <!-- Topbar Social Icons End -->
-
-              <!-- Topbar Request Quote Start -->
-              <div class="top-bar-btn d-inline-flex request-btn"> 
-                <a class="btn-theme icon-left bg-orange" href="#" role="button" data-toggle="modal" data-target="#request_popup"><i class="icofont-page"></i> Request Quote</a> 
-              </div>
-              <!-- Topbar Request Quote End -->
-        <!-- <span class="order-lg-last d-inline-flex request-btn">
-            <a class="nav-link mr-2 ml-auto" href="#" id="search_home"><i class="icofont-search"></i></a>
-        </span> -->
-        <!-- Toggle Button Start -->
-        <button class="navbar-toggler x collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <!-- Toggle Button End -->
-      </div>
-          <div class="collapse navbar-collapse" id="navbarCollapse" data-hover="dropdown" data-animations="slideInUp slideInUp slideInUp slideInUp">
+           <div class="collapse navbar-collapse" id="navbarCollapse" data-hover="dropdown" data-animations="slideInUp slideInUp slideInUp slideInUp">
             <div class="ml-auto pt-2">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item dropdown">
@@ -154,143 +102,171 @@
     <!-- Main Navigation End -->
   </header>
 
-       
 
 <!-- Main Body Content Start -->
   <main id="body-content" style="overflow-y: inherit;">
-    <!-- Welcome To Cargo Start -->
-
-    <section class="wide-tb-100 p-0 bg-sky-blue home-welcome">
+   <!-- Contact Details Start -->
+    <section class="wide-tb-100 pos-rel">
       <div class="container">
-        <div class="row">
-          <img src="images/Contact-us-banner.png" alt="" class="img-fluid">
-          
-
+        <div class="contact-map-bg option">
+          <img src="images/map-bg.png" alt="">
         </div>
-      </div>
-    </section>
-    <!-- Welcome To Cargo End -->
-   
-    <section class="wide-tb-40 contact-full-shadow">
-     <div class="container">
-  <div class="row">
-    <div class="col">
-      <img src="images/blog_img_3.jpg" alt="">
-    </div>
-    <div class="col-6">
-      <h3 class="text-center text-secondary">Get In Touch</h3><br>
 
-  <form action="" class="form-group">
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label>First name</label>
-      <input type="text" class="form-control" value="" required>
-    </div>
-    <div class="col-md-6 mb-3">
-      <label>Last name</label>
-      <input type="text" class="form-control" value="" required>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label>Email Id</label>
-      <input type="email" class="form-control" value="" required>
-    </div>
-    <div class="col-md-6 mb-3">
-      <label>Contact No</label>
-      <input type="text" class="form-control" value="" required>
-    </div>
-  </div>
-  <div class="form-row">
-    
-    <div class="col-md-6 mb-3">
-      <label>City</label>
-      <input type="text" class="form-control" value="" required>
-    </div>
-
-    <div class="col-md-6 mb-3">
-      <label>Zip Code</label>
-      <input type="text" class="form-control" value="" required>
-    </div>
-  </div>
-<div class="row">
-  
-
-  <div class="col-md-12 mb-6">
-    <label>Message</label>
-    <textarea class="form-control" cols="100" rows="10"></textarea>
-  </div>
-
-  </div>
-  
-    <button class=" btn bg-orange" type="submit">Submit form</button>
-  
-</form>
- <!-- <form action="#" method="post" id="contactusForm" novalidate="novalidate" class="col square-field">
-                    <div class="form-row mb-4">
-                      <div class="col">
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Name">*
-                      </div>
-                      <div class="col">
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Email">*
-                      </div>
-
-                      
-                    </div>
-                    <div class="form-row mb-4">
-
-                      <div class="col">
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Contact">*
-                      </div>
-                      <div class="col">
-                        <select title="Please choose a package" required=""  name="Transport_Package" id ="Transport_Package" class="custom-select" aria-required="true" aria-invalid="false">
-                            <option value="">Transport Type</option>
-                            <option value="Type 1">Type 1</option>
-                            <option value="Type 2">Type 2</option>
-                            <option value="Type 3">Type 3</option>
-                            <option value="Type 4">Type 4</option>
-                        </select>
-                      </div>
-                        
-                    </div>
-                    <div class="form-row mb-4">
-                      <div class="col">
-                        <textarea rows="7" name="cment" id="cment" placeholder="Message" class="form-control"></textarea>
-                      </div>
-                    </div>
-                    <div class="text-center">
-            <button type="button" class=" btn bg-orange text-capitalize w-100">submit</button>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="h2-md mb-4 fw-7 txt-blue">Our Address</h2>
+            <!-- Contact Detail Left -->
+            <div class="contact-detail-shadow no-shadow mb-5 wow fadeInRight" data-wow-duration="0" data-wow-delay="0s">
+              <h4>Noida</h4>
+              
+              <div class="d-flex align-items-start items">
+                <i class="icofont-phone"></i> <span>+91-8510909012</span>
+              </div>
+              <div class="text-nowrap d-flex align-items-start items">
+                <i class="icofont-email"></i> <a href="#">paramsingh989@gmail.com</a>
+              </div>
+            </div>
+            <!-- Contact Detail Left -->
           </div>
-                </form>  -->     
-    </div>
-    <div class="col">
-     Contact Number: 1860 233 1234 / 022 6260 1234 / 044 6634 4600
-AHMEDABAD
-Address
-BLUE DART EXPRESS LTD
-SHALIMAR CO-OP HSG SOC,
-NEAR EMBASSY MARKET,
-OFF ASHRAM ROAD.
-Location
-AHMEDABAD
-Pincode
-380009
-Email
-customerservice@bluedart.com
-    </div>
-  </div>
-  
-</div>
+
+
+          <div class="col-md-8 col-sm-12">
+            <h2 class="h2-md mb-4 fw-7 txt-blue">Say Hello! Its Free</h2>
+            <div class="">
+          
+              <div class="free-quote-form contact-page-option wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">                  
+                  <form action="http://mannatstudio.com/html/logzee/Version_2.1/contact_process.php" method="post" id="contactoption" novalidate="novalidate" class="rounded-field">
+                      <div class="form-row mb-4">
+                        <div class="col">
+                          <input type="text" name="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col">
+                          <input type="text" name="email" class="form-control" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-row mb-4">
+                        <div class="col">
+                          <select title="Please choose a package" required="" name="Transport_Package" id ="Transport_Package" class="custom-select" aria-required="true" aria-invalid="false">
+                              <option value="">Transport Type</option>
+                              <option value="Type 1">Type 1</option>
+                              <option value="Type 2">Type 2</option>
+                              <option value="Type 3">Type 3</option>
+                              <option value="Type 4">Type 4</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select title="Please choose a package" required="" name="Freight_Package" id="Freight_Package" class="custom-select" aria-required="true" aria-invalid="false">
+                              <option value="">Type of freight</option>
+                              <option value="Type 1">Type 1</option>
+                              <option value="Type 2">Type 2</option>
+                              <option value="Type 3">Type 3</option>
+                              <option value="Type 4">Type 4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row mb-4">
+                        <div class="col">
+                          <textarea name="cment" rows="7" placeholder="Message" class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row text-center">
+
+                          <button name="contactoption" id="contactoption" type="submit" class="form-btn mx-auto btn-theme bg-orange">Submit Now <i class="icofont-rounded-right"></i></button>
+                      </div>
+                  </form>                
+              </div>
+              
+              </div>
+          </div>
+        </div>
+      </div>        
     </section>
+    <!-- Contact Details End -->   
+
     </main>
   <!-- Main Footer Start -->
   <footer class="wide-tb-70 bg-light-gray pb-0">
+    <div class="container">
+      <div class="row">
+
+        <!-- Column First -->
+        <div class="col-lg-4 col-md-6 wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">
+          <div class="logo-footer">
+            <img src="images/fleet-logo.png" alt="">
+          </div>
+          
+    <p>We offers and consulting world class air freight forwarding, MIS, TAT, supply chain management
+    to each and every reference docket carrying sensitive, speed and security for Delivery.</p>
+    <p> We have to pride and introduce digital consulting of courier and cargo service from top 
+      selecting courier and cargo company in India and international level. </p>
+          <h3 class="footer-heading">We're Social</h3>
+          <div class="social-icons">
+              <a href="#"><i class="icofont-facebook"></i></a> 
+              <a href="#"><i class="icofont-twitter"></i></a> 
+              <a href="#"><i class="icofont-whatsapp"></i></a> 
+              <a href="#"><i class="icofont-google-plus"></i></a> 
+            </div>
+        </div>
+        <!-- Column First -->
+
+        <!-- Column Second -->
+        <div class="col-lg-4 col-md-6 wow fadeInLeft" data-wow-duration="0" data-wow-delay="0.2s">
+          <h3 class="footer-heading">Recent Post</h3>
+          <div class="blog-list-footer">
+            <ul class="list-unstyled">
+              <li>
+                <div class="media">
+                  <div class="post-thumb">
+                     <img src="images/post_thumb_1.jpg" alt="" class="rounded-circle">
+                  </div>
+                  <div class="media-body post-text">
+                      <h5 class="mb-3 h5-md"><a href="#">Liberalisation of air cargo</a></h5>
+                      <p>Far far away, behind the word mountains, far from the countries.</p>
+
+                      <div class="comment-box">
+                        <span><i class="icofont-ui-calendar"></i>  Date</span>
+                        <span><a href="#"><i class="icofont-speech-comments"></i>  25</a></span>
+                      </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="post-thumb">
+                     <img src="images/post_thumb_2.jpg" alt="" class="rounded-circle">
+                  </div>
+                  <div class="media-body post-text">
+                      <h5 class="mb-3 h5-md"><a href="#">New Ocean Freight Rules</a></h5>
+                      <p>Far far away, behind the word mountains, far from the countries.</p>
+
+                      <div class="comment-box">
+                        <span><i class="icofont-ui-calendar"></i> Date</span>
+                        <span><a href="#"><i class="icofont-speech-comments"></i>  25</a></span>
+                      </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+        <!-- Column Second -->
+
+        <!-- Column Third -->
+        <div class="col-lg-4 col-md-12 wow fadeInLeft" data-wow-duration="0" data-wow-delay="0.4s">
+          <h3 class="footer-heading">Our Photostream</h3>
+          <ul id="basicuse" class="photo-thumbs"></ul>
+        </div>
+        <!-- Column Third -->
+        
+      </div>
+    </div>  
+
     <div class="copyright-wrap bg-navy-blue wide-tb-30">
       <div class="container">
         <div class="row text-md-left text-center">
             <div class="col-sm-12 col-md-6 copyright-links">  
-              <a href="#">Privacy Policy</a>   <span>|</span>   <a href="#">CONTACT</a>   <span>|</span>   <a href="#">FAQS</a>
+              <a href="#">Privacy Policy</a>   <span>|</span>   <a href="contact-us.html">CONTACT</a>   <span>|</span>   <a href="#">FAQS</a>
             </div>
             <div class="col-sm-12 col-md-6 text-md-right text-center">
                   Designed by <a href="#" rel="nofollow">PrequbeDigital</a> © 2019 All Rights Reserved
