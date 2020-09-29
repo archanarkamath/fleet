@@ -1,14 +1,13 @@
 core: 8.x
 type: theme
-name: 'Fleet courier '
-base theme: classy
+name: 'Fleet courier'
 description: 'Fleet courier theme'
 libraries:
   - 'fleet/global-styling'
   
 regions:
   header: 'Header'
-  breadcrumb: 'Breadcrumb'
+  banner: 'Banner'
   content: 'Content'
   footer: 'Footer'
   footerbottom: 'Footer Bottom'
