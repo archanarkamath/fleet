@@ -1331,7 +1331,7 @@ footer .social-icons a:hover{
     transition: all 400ms ease-in-out;
 }
 .footer-widget-menu ul li a span{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 .footer-widget-menu ul li a i{
     padding: 0 10px 0 0;
