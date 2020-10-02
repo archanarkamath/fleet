@@ -12,7 +12,10 @@ use Drupal\file\Entity\File;
 
 
 function fleet_preprocess_page(&$variables) {
-		$variables['#attached']['library'][] = 'fleet/global-styling';
+	if($variables['is_front'])
+	{
+		$variables['#attached']['library'][] = 'fleet/banner-styling';
+	}
 
 }
 function fleet_preprocess_breadcrumb(&$variables) {

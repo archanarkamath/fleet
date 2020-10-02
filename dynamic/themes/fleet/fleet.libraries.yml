@@ -16,3 +16,13 @@ global-styling:
     assets/js/jquery.appear.min.js: {}
     assets/js/wow.min.js: {}
     assets/js/site-custom.js: {}
+
+banner-styling:
+  header: true
+  css:
+    theme:
+      assets/rev-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css: {}
+      assets/rev-slider/revolution/fonts/font-awesome/css/font-awesome.css: {}
+      assets/rev-slider/revolution/css/settings.css: {}
+      assets/rev-slider/revolution/css/layers.css: {}
+      assets/rev-slider/revolution/css/navigation.css: {}
