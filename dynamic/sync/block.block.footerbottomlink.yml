@@ -1,0 +1,25 @@
+uuid: c42a5585-fb50-445b-bf86-d9b1dcd4da36
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
+  module:
+    - block_content
+  theme:
+    - fleet
+id: footerbottomlink
+theme: fleet
+region: footerbottom
+weight: 0
+provider: null
+plugin: 'block_content:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
+settings:
+  id: 'block_content:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
+  label: 'Footer Bottom Link'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

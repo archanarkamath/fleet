@@ -1,0 +1,20 @@
+uuid: 01e7ed8b-083a-4508-ab43-e7c8dbb5e270
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fleet
+id: poweredbydrupal
+theme: fleet
+region: footerbottom
+weight: -1
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Preqube'
+  provider: system
+  label_display: '0'
+visibility: {  }
