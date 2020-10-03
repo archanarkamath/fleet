@@ -16,9 +16,9 @@
  */
 #}
 
-
-<div class="navbar-collapse collapse">
-
+<div class="col-lg-auto">
+   <div class="collapse navbar-collapse" id="navbarCollapse" data-hover="dropdown" data-animations="slideInUp slideInUp slideInUp slideInUp">
+	<div class="ml-auto pt-2">
 {% import _self as menus %}
 
 {#
@@ -28,24 +28,24 @@
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  {% import _self as menus %}
-  {% if items %}
-    {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('nav', 'navbar-nav', 'navbar-right') }}>
+{% import _self as menus %}
+{% if items %}
+	{% if menu_level == 0 %}
+      <ul{{ attributes.addClass('navbar-nav', 'mr-auto') }}>
     {% else %}
-      <ul{{ attributes.addClass('dropdown') }}>
+      <ul{{ attributes.addClass('dropdown-menu') }}>
     {% endif %}
-    {% for item in items %}
+	{% for item in items %}
       {%
         set item_classes = [
-          item.is_expanded? 'expanded',
-          item.is_expanded and menu_level == 0 ? 'drop',
+          item.is_expanded? 'nav-item',
+          item.is_expanded and menu_level == 0 ? 'dropdown',
           item.in_active_trail ? '',
         ]
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}">{{ item.title }} </a>
+        <a href="{{ item.url }}" class="dropdown-item">{{ item.title }} </a>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
@@ -56,8 +56,9 @@
       </li>
     {% endfor %}
     </ul>
-  {% endif %}
+	  <!-- Main Navigation End -->
+    {% endif %}
 {% endmacro %}
-
-	<!-- End Navigation List -->
+	</div>
+  </div>        
 </div>
