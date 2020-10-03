@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+
+<!-- Start Page Banner -->
+{% if breadcrumb %}
+<div class="page-banner" style="padding:25px 0; background: url('./preqube/images/background_1280.png.png') center #f9f9f9;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>{{ headtitle }}</h2>
+				<p>We Are Professional</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="breadcrumbs">
+					{% for item in breadcrumb %}
+						<li>
+							{% if item.url %}
+								<a href="{{item.url}}">{{item.text}}</a>
+							{% else %}
+								{{item.text}}
+							{% endif %}
+						</li>
+						
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
+<!-- End Page Banner -->
