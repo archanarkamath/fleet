@@ -38,17 +38,17 @@
 	{% for item in items %}
       {%
         set item_classes = [
-          item.is_expanded? 'nav-item',
-          item.is_expanded and menu_level == 0 ? 'dropdown',
+          item.is_expanded? '' : 'nav-item',
+          item.is_expanded and menu_level == 0 ? 'nav-item dropdown',
           item.in_active_trail ? '',
         ]
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}" class="dropdown-item">{{ item.title }} </a>
+        <a href="{{ item.url }}" class="nav-link dropdown-toggle-mob">{{ item.title }} </a>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        {{ link(item.title, item.url) }}
+        <a href="{{ item.url }}" class="nav-link">{{ item.title }} </a>
       {% endif %}
       {% if item.below %}
         {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav', 'navbar-right'), menu_level + 1) }}
