@@ -1,63 +1,63 @@
-<div class="navbar-default sidebar" role="navigation">
-  <div class="sidebar-nav">
-    <div class="sidebar-head">
-      <h3><span class="fa-fw open-close"><i class="ti-menu hidden-xs"></i><i class="ti-close visible-xs"></i></span> <span class="hide-menu">Navigation</span></h3> 
-    </div>
-    <ul class="nav" id="side-menu">
-      <li>
-        <a href="{{url('<front>')}}home" class="waves-effect"><i class="mdi mdi-av-timer fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-inverse pull-right">4</span></span></a>
-      </li>
-      
-	{% if user.hasPermission('company view') or user.hasPermission('company branchview') or  user.hasPermission('company deptview') or user.hasPermission('company desigview') or user.hasPermission('company configview') %}
-      <li class=""><a href="javascript:void(0)" class="waves-effect"><i class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">Administrative<span class="fa arrow"></span></span></a>
-        <ul class="nav nav-second-level two-li">
-		 {% if user.hasPermission('company view') %}
-		 <li><a href="{{url('<front>')}}company/view"><i class="mdi mdi-bank fa-fw"></i><span class="hide-menu">Company</span></a></li>
-		 {% endif %}
-          
-          {% if user.hasPermission('company branchview') %}
-		  <li> <a href="{{url('<front>')}}branch/list" class="waves-effect"><i class="mdi mdi-source-branch fa-fw"></i><span class="hide-menu">Branch</span></a> </li>
-		  {% endif %}
-		  
-          {% if user.hasPermission('company deptview') %}
-		  <li><a href="{{url('<front>')}}department/view"><i class="mdi mdi-lan fa-fw"></i><span class="hide-menu">Department</span></a></li>
-		  {% endif %}
-		  
-          {% if user.hasPermission('company desigview') %}
-		  <li><a href="{{url('<front>')}}designation/view"><i class="mdi mdi-account-card-details fa-fw"></i><span class="hide-menu">Designation</span></a></li>
-		  {% endif %}
-		  
-          {% if user.hasPermission('company configview') %}
-		  <li><a href="{{url('<front>')}}organisation/config"><i class="mdi mdi-settings fa-fw"></i><span class="hide-menu">Configuration</span></a></li>
-		  {% endif %}
-		  
-		  {% if user.hasPermission('company workorder') %}
-		  <li><a href="{{url('<front>')}}wordorder/list"><i class="mdi mdi-settings fa-fw"></i><span class="hide-menu">Work Order</span></a></li>
-		  {% endif %}
-		  
-        </ul>
-      </li>
-      {% endif %} 
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
 
 
-      {% if user.hasPermission('employee emplview') %}
-	  <li class=""><a href="javascript:void(0)" class="waves-effect"><i class="mdi mdi-account-settings-variant fa-fw"></i> <span class="hide-menu">HR Management<span class="fa arrow"></span></span></a>
-        <ul class="nav nav-second-level">
-          {% if user.hasPermission('employee emplview') %}<li><a href="{{url('<front>')}}employee"><i class="icon-user fa-fw"></i><span class="hide-menu">Employee</span></a></li>{% endif %}
-		  {% if user.hasPermission('hr unitinfo') %}<li><a href="{{url('<front>')}}unitinfo/unitinfo"><i class="mdi mdi-settings fa-fw"></i><span class="hide-menu">Unit Information</span></a></li>{% endif %}
-		 
-        </ul>
-      </li>
-     {% endif %}
-      <li class=""><a href="javascript:void(0)" class="waves-effect"><i class="mdi mdi-clipboard-check fa-fw"></i> <span class="hide-menu">Employee services<span class="fa arrow"></span></span></a>
-        <ul class="nav nav-second-level">
-          <li><a href="{{url('<front>')}}profile"><i class="mdi mdi-account-card-details fa-fw"></i><span class="hide-menu">My profile</span></a></li>
-          <li><a href="{{url('<front>')}}documents"><i class="mdi mdi-file-multiple fa-fw"></i><span class="hide-menu">My documents</span></a></li>
-          <li><a href="{{url('<front>')}}leave"><i class="mdi mdi-calendar-today fa-fw"></i><span class="hide-menu">Leave</span></a></li>
-        </ul>
-      </li>
-       
+<div class="navbar-collapse collapse">
 
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('nav', 'navbar-nav', 'navbar-right') }}>
+    {% else %}
+      <ul{{ attributes.addClass('dropdown') }}>
+    {% endif %}
+    {% for item in items %}
+      {%
+        set item_classes = [
+          item.is_expanded? 'expanded',
+          item.is_expanded and menu_level == 0 ? 'drop',
+          item.in_active_trail ? '',
+        ]
+      %}
+      {% if menu_level == 0 and item.is_expanded %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+        <a href="{{ item.url }}">{{ item.title }} </a>
+      {% else %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+        {{ link(item.title, item.url) }}
+      {% endif %}
+      {% if item.below %}
+        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav', 'navbar-right'), menu_level + 1) }}
+      {% endif %}
+      </li>
+    {% endfor %}
     </ul>
-  </div>
+  {% endif %}
+{% endmacro %}
+
+	<!-- End Navigation List -->
 </div>
