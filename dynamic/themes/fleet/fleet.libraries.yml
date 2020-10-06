@@ -16,6 +16,7 @@ global-styling:
     assets/js/jquery.appear.min.js: {}
     assets/js/wow.min.js: {}
     assets/js/site-custom.js: {}
+    assets/js/fleet-custom.js: {}
 
 banner-styling:
   header: true

@@ -11,7 +11,7 @@ dependencies:
 id: footerbottomlink
 theme: fleet
 region: footerbottom
-weight: 0
+weight: -1
 provider: null
 plugin: 'block_content:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
 settings:
