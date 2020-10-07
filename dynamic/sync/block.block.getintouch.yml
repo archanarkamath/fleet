@@ -1,0 +1,25 @@
+uuid: 41c1a388-0abd-4a03-8f7e-8a4643015d14
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c73fec35-00ca-4692-850c-911c4e7452f5'
+  module:
+    - block_content
+  theme:
+    - fleet
+id: getintouch
+theme: fleet
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:c73fec35-00ca-4692-850c-911c4e7452f5'
+settings:
+  id: 'block_content:c73fec35-00ca-4692-850c-911c4e7452f5'
+  label: 'Get In Touch'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
