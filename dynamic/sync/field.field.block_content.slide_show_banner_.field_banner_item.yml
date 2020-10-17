@@ -1,0 +1,30 @@
+uuid: fc8adf6e-d696-40d8-b9f0-ffa83e6d3de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slide_show_banner_
+    - field.storage.block_content.field_banner_item
+    - paragraphs.paragraphs_type.slide_show
+  module:
+    - entity_reference_revisions
+id: block_content.slide_show_banner_.field_banner_item
+field_name: field_banner_item
+entity_type: block_content
+bundle: slide_show_banner_
+label: 'Banner Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slide_show: slide_show
+    target_bundles_drag_drop:
+      slide_show:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

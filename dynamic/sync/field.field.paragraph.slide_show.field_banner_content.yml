@@ -1,0 +1,19 @@
+uuid: 19bcb3ca-7058-41c1-b806-319f29c8b315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_content
+    - paragraphs.paragraphs_type.slide_show
+id: paragraph.slide_show.field_banner_content
+field_name: field_banner_content
+entity_type: paragraph
+bundle: slide_show
+label: 'Banner Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,32 @@
+uuid: 71280f5f-6eda-4d9b-a8ee-8cbff3c57078
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_float_box
+    - field.field.block_content.banner_float_box.field_image_background
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.banner_float_box.default
+targetEntityType: block_content
+bundle: banner_float_box
+mode: default
+content:
+  field_image_background:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

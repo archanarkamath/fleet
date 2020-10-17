@@ -1,0 +1,23 @@
+uuid: 31806dad-9b04-4be3-8e22-5d79388b56f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_text
+    - paragraphs.paragraphs_type.slide_show
+  module:
+    - link
+id: paragraph.slide_show.field_button_text
+field_name: field_button_text
+entity_type: paragraph
+bundle: slide_show
+label: 'Button Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

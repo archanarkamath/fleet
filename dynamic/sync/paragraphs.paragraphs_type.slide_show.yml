@@ -1,0 +1,7 @@
+uuid: ceeff780-9f66-44ff-9d90-e274ca0c9a67
+langcode: en
+status: true
+dependencies: {  }
+id: slide_show
+label: 'Slide Show'
+behavior_plugins: {  }

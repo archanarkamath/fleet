@@ -15,6 +15,7 @@ function fleet_preprocess_page(&$variables) {
 	if($variables['is_front'])
 	{
 		$variables['#attached']['library'][] = 'fleet/banner-styling';
+		$variables['#attached']['library'][] = 'fleet/banner-js';
 	}
 
 }
