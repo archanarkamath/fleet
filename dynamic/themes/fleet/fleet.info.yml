@@ -4,6 +4,7 @@ name: 'Fleet courier'
 description: 'Fleet courier theme'
 libraries:
   - 'fleet/global-styling'
+  - 'fleet/global-jsstyling'
   
 regions:
   header: 'Header'

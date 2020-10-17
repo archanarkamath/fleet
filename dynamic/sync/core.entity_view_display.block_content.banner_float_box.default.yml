@@ -1,0 +1,24 @@
+uuid: ab90db9b-f3ad-4adb-8dee-1b1f44c3e69f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_float_box
+    - field.field.block_content.banner_float_box.field_image_background
+  module:
+    - image
+id: block_content.banner_float_box.default
+targetEntityType: block_content
+bundle: banner_float_box
+mode: default
+content:
+  field_image_background:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

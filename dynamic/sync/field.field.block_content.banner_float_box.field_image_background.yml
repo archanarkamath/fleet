@@ -1,0 +1,38 @@
+uuid: cbf91e2c-f3b4-48ce-bda2-09c84cce5fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_float_box
+    - field.storage.block_content.field_image_background
+  module:
+    - image
+id: block_content.banner_float_box.field_image_background
+field_name: field_image_background
+entity_type: block_content
+bundle: banner_float_box
+label: 'Image background'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '60 KB'
+  max_resolution: 350x199
+  min_resolution: 350x190
+  alt_field: false
+  alt_field_required: false
+  title_field: true
+  title_field_required: true
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

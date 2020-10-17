@@ -3,18 +3,25 @@ global-styling:
   css:
     theme:
       assets/css/base.css: {}
+
+global-jsstyling:
   js:
     assets/js/jquery.min.js: {}
     assets/js/popper.min.js: {}
     assets/js/bootstrap.min.js: {}
     assets/js/bootstrap-dropdownhover.min.js: {}
     assets/js/fontawesome-all.js: {}
+    assets/js/owl.carousel.min.js: {}
+    assets/twitter/jquery.tweet.js: {}
+    assets/js/jflickrfeed.min.js: {}
     assets/js/jquery.waypoints.min.js: {}
     assets/js/jquery.easing.min.js: {}
     assets/js/jquery.counterup.min.js: {}
     assets/js/jquery.easypiechart.min.js: {}
-    assets/js/jquery.appear.min.js: {}
+    assets/js/jquery.appear.js: {}
     assets/js/wow.min.js: {}
+    http://maps.google.com/maps/api/js?sensor=false: {}
+    assets/js/jquery.gmap.min.js: {}
     assets/js/site-custom.js: {}
     assets/js/fleet-custom.js: {}
 
@@ -27,3 +34,16 @@ banner-styling:
       assets/rev-slider/revolution/css/settings.css: {}
       assets/rev-slider/revolution/css/layers.css: {}
       assets/rev-slider/revolution/css/navigation.css: {}
+banner-js:
+  js:
+    assets/rev-slider/revolution/js/jquery.themepunch.tools.min.js: {}
+    assets/rev-slider/revolution/js/jquery.themepunch.revolution.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js: {}
+    assets/rev-slider/revolution/js/extensions/revolution.extension.video.min.js: {}
+    assets/js/fleet-custom-slide.js: {}

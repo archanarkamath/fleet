@@ -1,0 +1,8 @@
+uuid: ac6c1e84-826d-480f-b812-e5ac63163994
+langcode: en
+status: true
+dependencies: {  }
+id: banner_float_box
+label: 'Banner Float Box'
+revision: 0
+description: 'This helps to create Banner Float three box content'

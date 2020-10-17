@@ -43,12 +43,12 @@
           item.in_active_trail ? '',
         ]
       %}
-      {% if menu_level == 0 and item.is_expanded %}
+      {% if menu_level == 0 %}
         <li{{ item.attributes.addClass(item_classes) }}>
         <a href="{{ item.url }}" class="nav-link dropdown-toggle-mob">{{ item.title }} </a>
       {% else %}
-        <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}" class="nav-link">{{ item.title }} </a>
+        <li>
+        <a href="{{ item.url }}" class="dropdown-item">{{ item.title }} </a>
       {% endif %}
       {% if item.below %}
         {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav', 'navbar-right'), menu_level + 1) }}
