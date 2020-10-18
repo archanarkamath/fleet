@@ -1,0 +1,8 @@
+uuid: b8fa4aa0-83b8-44a3-92ab-c8155dca5aa1
+langcode: en
+status: true
+dependencies: {  }
+id: slide_show_banner_
+label: 'Slide Show banner '
+revision: 0
+description: 'This helps to create banner image at Home page'

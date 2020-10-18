@@ -1,0 +1,19 @@
+uuid: 6bc652bc-5cac-426f-8891-aa651413baa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_head_title
+    - paragraphs.paragraphs_type.slide_show
+id: paragraph.slide_show.field_sub_head_title
+field_name: field_sub_head_title
+entity_type: paragraph
+bundle: slide_show
+label: 'Sub Head Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

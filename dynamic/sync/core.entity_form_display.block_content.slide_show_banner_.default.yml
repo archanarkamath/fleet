@@ -1,0 +1,35 @@
+uuid: 87675640-33e4-4c03-88c1-b37bed679a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slide_show_banner_
+    - field.field.block_content.slide_show_banner_.field_banner_item
+  module:
+    - paragraphs
+id: block_content.slide_show_banner_.default
+targetEntityType: block_content
+bundle: slide_show_banner_
+mode: default
+content:
+  field_banner_item:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

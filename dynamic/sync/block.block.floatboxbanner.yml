@@ -1,0 +1,31 @@
+uuid: 08c54638-0c00-49e7-8fc8-e19f49f960bb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner_float_box:84b0301f-b77e-49da-9ddb-a73a63879257'
+  module:
+    - block_content
+    - system
+  theme:
+    - fleet
+id: floatboxbanner
+theme: fleet
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:84b0301f-b77e-49da-9ddb-a73a63879257'
+settings:
+  id: 'block_content:84b0301f-b77e-49da-9ddb-a73a63879257'
+  label: 'Float Box Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

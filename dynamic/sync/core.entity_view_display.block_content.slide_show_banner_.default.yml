@@ -1,0 +1,24 @@
+uuid: 9527335f-54da-404e-8132-9a4733a48396
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slide_show_banner_
+    - field.field.block_content.slide_show_banner_.field_banner_item
+  module:
+    - entity_reference_revisions
+id: block_content.slide_show_banner_.default
+targetEntityType: block_content
+bundle: slide_show_banner_
+mode: default
+content:
+  field_banner_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
