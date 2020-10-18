@@ -1,4 +1,8 @@
-<header class="fixed-top header-fullpage bordered-nav wow fadeInDown">
+{% if is_front %}
+	<header class="fixed-top header-fullpage bordered-nav wow fadeInDown">
+ {% else %}
+	<header class="fixed-top header-fullpage bordered-nav wow fadeInDown top-border top-transparent">
+{% endif %}
     <!-- Main Navigation Start -->
     <nav class="navbar navbar-expand-lg bg-transparent">
       <div class="container text-nowrap bdr-nav px-0">
