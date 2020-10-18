@@ -1,6 +1,6 @@
 uuid: 9d3eecb0-1752-495c-890e-c74cf5714a3b
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:banner_float_box:ab6f4a0f-c72f-4e80-b3e1-be91741f5934'
