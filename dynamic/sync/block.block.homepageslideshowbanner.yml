@@ -1,11 +1,12 @@
-uuid: 79a01570-0b39-42e3-8dce-335070b75940
+uuid: a80c4c03-1ad2-45fd-b9ff-d5e81ce7ddf3
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:slide_show_banner_:b2518d91-4fdd-48b1-9fa1-ff77194f7885'
+    - 'block_content:slide_show_banner_:ff09caf8-b577-4a9b-9186-c1d408971dec'
   module:
     - block_content
+    - system
   theme:
     - fleet
 id: homepageslideshowbanner
@@ -13,13 +14,18 @@ theme: fleet
 region: banner
 weight: 0
 provider: null
-plugin: 'block_content:b2518d91-4fdd-48b1-9fa1-ff77194f7885'
+plugin: 'block_content:ff09caf8-b577-4a9b-9186-c1d408971dec'
 settings:
-  id: 'block_content:b2518d91-4fdd-48b1-9fa1-ff77194f7885'
+  id: 'block_content:ff09caf8-b577-4a9b-9186-c1d408971dec'
   label: 'Home Page Slide Show Banner'
   provider: block_content
   label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
