@@ -3,7 +3,7 @@
                 <h2 class="h2-md mb-4 fw-7 txt-blue">Please fill the details</h2>
 
                 <div class="free-quote-form contact-page-option wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">                  
-                <form {{ attributes }} class="rounded-field">
+                <form {{ attributes }}>
                 <div class="form-row mb-4">
                   <div class="col">
                     {{ element.elements.name }}
@@ -14,17 +14,19 @@
                 </div>
                 <div class="form-row mb-4">
                   <div class="col">
-                    {{ element.elements.transport_type }}
+                    {{ element.elements.mobile }}
                   </div>
-                  <div class="col">
-                    {{ element.elements.type_of_freight }}
+				  <div class="col">
+                    {{ element.elements.subject }}
                   </div>
                 </div>
-                <div class="form-row mb-4">
-                  <div class="col">
+				 <div class="form-row mb-8">
+				  <div class="col">
                     {{ element.elements.message }}
                   </div>
-                </div>
+				 </div>
+				
+                <br>
                 <div class="form-row text-center">
 
                     {{ element.elements.contact_captcha }}
