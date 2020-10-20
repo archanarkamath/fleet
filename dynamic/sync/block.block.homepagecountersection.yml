@@ -1,0 +1,31 @@
+uuid: 5775618c-df47-4760-96c3-b29b0e285b7b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:393895de-bb25-4533-a6e9-93964e860442'
+  module:
+    - block_content
+    - system
+  theme:
+    - fleet
+id: homepagecountersection
+theme: fleet
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:393895de-bb25-4533-a6e9-93964e860442'
+settings:
+  id: 'block_content:393895de-bb25-4533-a6e9-93964e860442'
+  label: 'Home page counter section'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

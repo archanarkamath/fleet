@@ -1,0 +1,31 @@
+uuid: 3539cbb7-324f-481d-8144-6ce862172b00
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c89a02ba-0bd7-4062-8373-b8c12c81c32a'
+  module:
+    - block_content
+    - system
+  theme:
+    - fleet
+id: aboutus
+theme: fleet
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:c89a02ba-0bd7-4062-8373-b8c12c81c32a'
+settings:
+  id: 'block_content:c89a02ba-0bd7-4062-8373-b8c12c81c32a'
+  label: 'About us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
