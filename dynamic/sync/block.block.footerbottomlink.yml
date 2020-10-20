@@ -1,9 +1,9 @@
-uuid: c42a5585-fb50-445b-bf86-d9b1dcd4da36
+uuid: cb48ef5a-969f-476b-872f-95536485f8e9
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
+    - 'block_content:basic:13d027e7-e4f5-47ae-97de-52c9ff25f639'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: footerbottomlink
 theme: fleet
 region: footerbottom
-weight: -1
+weight: 0
 provider: null
-plugin: 'block_content:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
+plugin: 'block_content:13d027e7-e4f5-47ae-97de-52c9ff25f639'
 settings:
-  id: 'block_content:eea173f3-5e2d-4404-a6a3-a9c8edb56a6d'
+  id: 'block_content:13d027e7-e4f5-47ae-97de-52c9ff25f639'
   label: 'Footer Bottom Link'
   provider: block_content
   label_display: '0'

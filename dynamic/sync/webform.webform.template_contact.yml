@@ -1,23 +1,23 @@
-uuid: 45fff67d-1dc7-4140-ac5c-a0e153458e6c
+uuid: 68cfb358-8c17-4e17-b0cd-c80fb6ca3187
 langcode: en
-status: open
+status: closed
 dependencies:
   enforced:
     module:
-      - webform
+      - webform_templates
 _core:
-  default_config_hash: Db1CJM6FchEqqeVz5YJThCK0WB599y4NjQ4GkPcGF5g
+  default_config_hash: tmZf8rN0VJB9XXtJ2-AadaHu9wdo4vHrEr9fMaoA9Bw
 open: null
 close: null
 weight: 0
 uid: null
-template: false
+template: true
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: template_contact
+title: 'Contact Us'
+description: 'A basic contact webform template.'
 category: ''
-elements: "'#attributes':\n  class:\n    - rounded-field\nname:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#title_display': invisible\n  '#placeholder': 'Your Name'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\n  '#attributes':\n    class:\n      - form-control\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': invisible\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\n  '#attributes':\n    class:\n      - form-control\nmobile:\n  '#type': textfield\n  '#title': Mobile\n  '#title_display': invisible\n  '#placeholder': Mobile\n  '#attributes':\n    class:\n      - form-control\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': invisible\n  '#placeholder': Subject\n  '#required': true\n  '#attributes':\n    class:\n      - form-control\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': invisible\n  '#rows': '7'\n  '#placeholder': Message\n  '#required': true\n  '#attributes':\n    class:\n      - form-control\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
 css: ''
 javascript: ''
 settings:

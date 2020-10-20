@@ -1,9 +1,9 @@
-uuid: 41c1a388-0abd-4a03-8f7e-8a4643015d14
+uuid: 9f17c624-977f-49ee-ab55-4023a8a6f3b1
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:c73fec35-00ca-4692-850c-911c4e7452f5'
+    - 'block_content:basic:2a689486-dca4-45b3-a757-97edfa6a116e'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: getintouch
 theme: fleet
 region: footer
-weight: 0
+weight: -2
 provider: null
-plugin: 'block_content:c73fec35-00ca-4692-850c-911c4e7452f5'
+plugin: 'block_content:2a689486-dca4-45b3-a757-97edfa6a116e'
 settings:
-  id: 'block_content:c73fec35-00ca-4692-850c-911c4e7452f5'
+  id: 'block_content:2a689486-dca4-45b3-a757-97edfa6a116e'
   label: 'Get In Touch'
   provider: block_content
   label_display: '0'

@@ -1,23 +1,23 @@
-uuid: 45fff67d-1dc7-4140-ac5c-a0e153458e6c
+uuid: b2cc9c0c-80a7-4d51-ace1-f93345eedd94
 langcode: en
-status: open
+status: closed
 dependencies:
   enforced:
     module:
-      - webform
+      - webform_templates
 _core:
-  default_config_hash: Db1CJM6FchEqqeVz5YJThCK0WB599y4NjQ4GkPcGF5g
+  default_config_hash: DaotQgW52GCmcElGaTb27RyZjGAf-KAnD63b66Ov0jQ
 open: null
 close: null
 weight: 0
 uid: null
-template: false
+template: true
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: template_session_evaluation
+title: 'Session Evaluation'
+description: 'A session evaluation webform template.'
 category: ''
-elements: "'#attributes':\n  class:\n    - rounded-field\nname:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#title_display': invisible\n  '#placeholder': 'Your Name'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\n  '#attributes':\n    class:\n      - form-control\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': invisible\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\n  '#attributes':\n    class:\n      - form-control\nmobile:\n  '#type': textfield\n  '#title': Mobile\n  '#title_display': invisible\n  '#placeholder': Mobile\n  '#attributes':\n    class:\n      - form-control\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': invisible\n  '#placeholder': Subject\n  '#required': true\n  '#attributes':\n    class:\n      - form-control\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': invisible\n  '#rows': '7'\n  '#placeholder': Message\n  '#required': true\n  '#attributes':\n    class:\n      - form-control\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "overall:\n  '#type': radios\n  '#title': 'How was the session overall?'\n  '#options_display': side_by_side\n  '#options': likert_quality\n  '#required': true\nspeaker:\n  '#type': webform_likert\n  '#title': 'Please rate the speaker''s…'\n  '#questions':\n    mastery: 'Mastery of this topic'\n    presentation: 'Presentation skills'\n    quality: 'Quality of slides and visual aids'\n  '#answers': likert_quality\n  '#na_answer': true\n  '#required': true\nlearn:\n  '#type': radios\n  '#title': 'Did you learn something in this session you can use in real life?'\n  '#options_display': side_by_side\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n    N/A: N/A\n  '#required': true\ncomments:\n  '#type': textarea\n  '#title': Comments\n  '#description': 'What did you like most? What would you change? Advice for the speaker to make this session better?'\n"
 css: ''
 javascript: ''
 settings:
@@ -75,7 +75,7 @@ settings:
   autofill: false
   autofill_message: ''
   autofill_excluded_elements: {  }
-  wizard_progress_bar: true
+  wizard_progress_bar: false
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
@@ -84,7 +84,7 @@ settings:
   wizard_confirmation: true
   wizard_confirmation_label: ''
   wizard_track: ''
-  preview: 0
+  preview: 1
   preview_label: ''
   preview_title: ''
   preview_message: ''
@@ -97,10 +97,10 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: url_message
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_message: 'Thank you for your feedback.'
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -172,43 +172,9 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
-    id: email
-    label: 'Email confirmation'
-    handler_id: email_confirmation
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[webform_submission:values:email:raw]'
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
   email_notification:
     id: email
-    label: 'Email notification'
+    label: 'Email Notification'
     handler_id: email_notification
     status: true
     conditions: {  }
@@ -224,9 +190,9 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

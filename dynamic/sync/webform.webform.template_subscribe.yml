@@ -1,23 +1,23 @@
-uuid: 45fff67d-1dc7-4140-ac5c-a0e153458e6c
+uuid: 8ad43d92-6273-47af-9f54-09119f7af3f2
 langcode: en
-status: open
+status: closed
 dependencies:
   enforced:
     module:
-      - webform
+      - webform_templates
 _core:
-  default_config_hash: Db1CJM6FchEqqeVz5YJThCK0WB599y4NjQ4GkPcGF5g
+  default_config_hash: onWTNM-PuES1kQsaMbsYDUVBpq_5dq0UxM1XrtnKoEM
 open: null
 close: null
 weight: 0
 uid: null
-template: false
+template: true
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: template_subscribe
+title: Subscribe
+description: 'A subscribe to mailing list webform template.'
 category: ''
-elements: "'#attributes':\n  class:\n    - rounded-field\nname:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#title_display': invisible\n  '#placeholder': 'Your Name'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\n  '#attributes':\n    class:\n      - form-control\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#title_display': invisible\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\n  '#attributes':\n    class:\n      - form-control\nmobile:\n  '#type': textfield\n  '#title': Mobile\n  '#title_display': invisible\n  '#placeholder': Mobile\n  '#attributes':\n    class:\n      - form-control\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#title_display': invisible\n  '#placeholder': Subject\n  '#required': true\n  '#attributes':\n    class:\n      - form-control\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': invisible\n  '#rows': '7'\n  '#placeholder': Message\n  '#required': true\n  '#attributes':\n    class:\n      - form-control\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "first_name:\n  '#title': 'First Name'\n  '#type': textfield\n  '#required': true\nlast_name:\n  '#title': 'Last Name'\n  '#type': textfield\n  '#required': true\nemail:\n  '#title': Email\n  '#type': email\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Subscribe\n"
 css: ''
 javascript: ''
 settings:
@@ -97,10 +97,10 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: url_message
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_message: 'Thank you for subscribing.'
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -172,43 +172,9 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
-    id: email
-    label: 'Email confirmation'
-    handler_id: email_confirmation
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[webform_submission:values:email:raw]'
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
   email_notification:
     id: email
-    label: 'Email notification'
+    label: 'Email Notification'
     handler_id: email_notification
     status: true
     conditions: {  }
@@ -224,9 +190,9 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
