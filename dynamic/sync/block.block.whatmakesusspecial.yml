@@ -1,0 +1,31 @@
+uuid: 6271c283-60e4-49ff-95f2-bb21e6b22394
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:46704915-726a-4d0c-9315-f133dbdae3da'
+  module:
+    - block_content
+    - system
+  theme:
+    - fleet
+id: whatmakesusspecial
+theme: fleet
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:46704915-726a-4d0c-9315-f133dbdae3da'
+settings:
+  id: 'block_content:46704915-726a-4d0c-9315-f133dbdae3da'
+  label: 'What Makes Us Special'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

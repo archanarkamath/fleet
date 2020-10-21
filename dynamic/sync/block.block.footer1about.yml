@@ -1,9 +1,9 @@
-uuid: 25617422-093a-45b1-aa76-b8b2c21f1849
+uuid: 22f76b98-2673-4405-950c-72b775ffb9db
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:1b9bed57-ce61-4e68-815f-9701794d03c1'
+    - 'block_content:basic:59722ccf-001b-4e59-b0b2-d6c2614ba348'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: footer1about
 theme: fleet
 region: footer
-weight: -2
+weight: -4
 provider: null
-plugin: 'block_content:1b9bed57-ce61-4e68-815f-9701794d03c1'
+plugin: 'block_content:59722ccf-001b-4e59-b0b2-d6c2614ba348'
 settings:
-  id: 'block_content:1b9bed57-ce61-4e68-815f-9701794d03c1'
+  id: 'block_content:59722ccf-001b-4e59-b0b2-d6c2614ba348'
   label: 'Footer-1 About'
   provider: block_content
   label_display: '0'

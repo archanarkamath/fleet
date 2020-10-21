@@ -12,7 +12,7 @@ dependencies:
 id: floatboxbanner
 theme: fleet
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: 'block_content:84b0301f-b77e-49da-9ddb-a73a63879257'
 settings:
