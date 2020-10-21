@@ -37,14 +37,30 @@
 
         <div class="row">
 {% endif %}
+
+{% if 'enquiry' in url|render|render %}
+<section class="wide-tb-100 pos-rel">
+      <div class="container">
+        <div class="row">
+{% endif %}
 		
 	{{ page.content }}
+	
+	{% if 'enquiry' in url|render|render %}
+	  </div>
+      </div>        
+    </section>
+{% endif %}
 	
 {% if 'contactus' in url|render|render %}
 	  </div>
       </div>        
     </section>
 {% endif %}
+
+
+
+
 </main>
 
 <!-- Main Footer Start -->

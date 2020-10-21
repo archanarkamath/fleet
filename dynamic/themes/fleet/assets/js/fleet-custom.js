@@ -5,6 +5,8 @@ window.onload = function() {
         jQuery('#block-getintouch').addClass('col-lg-3 col-md-12');  
 		jQuery('#address').unwrap(); 
 		jQuery('#contact-form').unwrap(); 
+		jQuery('#enquiry-img').unwrap(); 
+		jQuery('#enquiry-form').unwrap();
     } else {
         // jQuery is not loaded
         alert("Doesn't Work");
