@@ -1,0 +1,91 @@
+{% if is_front %}
+	<header class="fixed-top header-fullpage bordered-nav wow fadeInDown">
+ {% else %}
+	<header class="fixed-top header-fullpage bordered-nav wow fadeInDown top-border top-transparent">
+{% endif %}
+    <!-- Main Navigation Start -->
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container text-nowrap bdr-nav px-0">
+	  
+	    {{ page.header }}
+        
+      </div>
+    </nav>
+    <!-- Main Navigation End -->
+</header>
+
+
+
+<!-- Main Body Content Start -->
+<main id="body-content" style="overflow-y: inherit;">		
+	<br/><br/><br/><br/><br/><br/><br/>
+   <!-- Contact Details Start -->
+    <section class="wide-tb-100 pos-rel">
+      <div class="container">
+        <div class="contact-map-bg option">
+          <img src="images/map-bg.png" alt="">
+        </div>
+
+        <div class="row d-flex justify-content-center">
+         
+          <div class="col-md-4 col-sm-12">
+            <h2 class="h2-md mb-4 fw-7 txt-blue">Login to Adminstrative</h2>
+           
+              <div class="free-quote-form contact-page-option wow fadeInLeft" data-wow-duration="0" data-wow-delay="0s">                  
+                   
+					<form class="user-login-form" data-drupal-selector="user-login-form" action="{{ url('<front>') }}user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+					  <div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name form-row mb-4">					 
+						<div class="col">
+							<input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" aria-describedby="edit-name--description" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required form-control" required="required" aria-required="true">
+
+						</div>		
+					  </div>
+					<div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass  form-row mb-4">
+					
+						  <div class="col">
+							<input data-drupal-selector="edit-pass" aria-describedby="edit-pass--description" type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required form-control" required="required" aria-required="true">
+
+						  </div>
+					  </div>
+					<input autocomplete="off" data-drupal-selector="form-swtptcih860jf-lorntmepld2fhu90bupohqvosstzy" type="hidden" name="form_build_id" value="form-swtpTciH860jF-lornTmePld2fHU90bUPoHqvoSStzY">
+
+					<input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
+ 
+					<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper form-row text-center" id="edit-actions">
+					<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in" class="form-btn mx-auto btn-theme bg-orange button js-form-submit form-submit">
+					</div>
+
+					</form>				  
+              </div>
+              
+              
+          </div>
+        </div>
+      </div>        
+    </section>
+    <!-- Contact Details End -->   
+
+	
+
+</main>
+
+<!-- Main Footer Start -->
+<footer class="wide-tb-70 bg-light-gray pb-0">
+<div class="container">
+  <div class="row">
+
+	{{ page.footer }}
+	
+  </div>
+</div>  
+
+<div class="copyright-wrap bg-navy-blue wide-tb-30">
+  <div class="container">
+	<div class="row text-md-left text-center">
+	
+		{{ page.footerbottom }}
+	</div>
+  </div>
+</div>
+</footer>
+<!-- Main Footer End -->
