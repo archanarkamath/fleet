@@ -1,0 +1,24 @@
+uuid: 506201b2-8386-4032-9f19-4dffd6179d42
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.frequently_ask_questions.field_faq_image
+    - field.field.node.frequently_ask_questions.field_question_answer
+    - node.type.frequently_ask_questions
+  module:
+    - user
+id: node.frequently_ask_questions.teaser
+targetEntityType: node
+bundle: frequently_ask_questions
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_faq_image: true
+  field_question_answer: true
