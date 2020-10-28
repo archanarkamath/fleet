@@ -14,29 +14,13 @@
 	<div class="container">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
-				{% for item in breadcrumb %}
 					<li class="breadcrumb-item" >
-						{% if item.url %}
-							<a href="{{item.url}}"><i class="icofont-home"></i>{{item.text}}</a>
-						{% else %}
-							{{item.text}}
-						{% endif %}
+							<a href="{{ url('<front>') }}"><i class="icofont-home"></i> Home</a>
 					</li>
-
-					<li class="breadcrumb-item" >
-						{% if item.url %}
-							<a href="{{item.url}}">{{item.text}}</a>
-						{% else %}
-							{{item.text}}
-						{% endif %}
-					</li>
-					<li class="breadcrumb-item active" aria-current="page" >
-							<h2>{{item.text}}</h2>
-					</li>
-					
-				{% endfor %}
+					<li class="breadcrumb-item" >{{ headtitle }}</li>
 			</ol>
 		</nav>
+		<h1>{{ headtitle }}</h1>
 	</div>
 </div>
 {% endif %}
